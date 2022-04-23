@@ -56,10 +56,9 @@ namespace assignment {
       return n;
     }
 
-    Matrix2x2 m = {{{0, 1}, {1, 1}}};
-    m = matrix_power(m, n - 1);
+    Matrix2x2 m = matrix_power(FibMatrix, n);
 
-    return m[0][0] + m[1][0];
+    return m[0][1];
   }
 
 }  // namespace assignment

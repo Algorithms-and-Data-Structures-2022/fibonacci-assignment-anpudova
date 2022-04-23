@@ -29,7 +29,6 @@ namespace assignment {
         res = matrix_multiply(res, matrix);
         power -= 1;
       }
-      return res;
     }
 
     return res;
