@@ -19,16 +19,10 @@ namespace assignment {
 
   Matrix2x2 matrix_power(Matrix2x2 matrix, int power) {
 
-    Matrix2x2 res = IdentityMatrix;  // единичная матрица
-
-    while (power != 0) {
-      if (power % 2 == 0) {
-        matrix_multiply(matrix, matrix);
-        power /= 2;
-      } else {
-        res = matrix_multiply(res, matrix);
-        power -= 1;
-      }
+    Matrix2x2 res = matrix;
+    while (power != 1) {
+      res = matrix_multiply(res, matrix);
+      power -= 1;
     }
 
     return res;
