@@ -42,7 +42,10 @@ namespace assignment {
 
   int64_t fib_recursive_memoization(int n, std::vector<int64_t>& cache) {
 
-    if (n <= 1 || cache[n] != -1) {
+    if (n <= 1) {
+      return cache[n];
+    }
+    if (cache[n] != -1) {
       return cache[n];
     }
 
