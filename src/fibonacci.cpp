@@ -10,7 +10,7 @@ namespace assignment {
     if (n <= 1) {
       return n;
     }
-    return (pow((1 + sqrt(5)) / 2, n) - pow((1 - sqrt(5)) / 2, n)) / sqrt(5);
+    return round((pow((1 + sqrt(5)), n) - pow((1 - sqrt(5)), n)) / (pow(2, n) * sqrt(5)));
   }
 
   int64_t fib_iterative(int n) {
@@ -22,7 +22,7 @@ namespace assignment {
     // буфер для хранения двух последних значения ряда Фибоначчи
     int64_t fib_prev = 0;
     int64_t fib_curr = 1;
-    int res = 0;
+    int res;
     for (int i = 1; i < n; i++) {
       res = fib_prev + fib_curr;
       fib_prev = fib_curr;
